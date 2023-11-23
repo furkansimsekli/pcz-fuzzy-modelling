@@ -1,0 +1,30 @@
+[System]
+Name='Ex7'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-5 5]
+NumMFs=3
+MF1='N':'trimf',[-4.3 -2.5 -0.7]
+MF2='Z':'trimf',[-1.8 0 1.8]
+MF3='P':'trimf',[0.7 2.5 4.3]
+
+[Output1]
+Name='output1'
+Range=[-10 10]
+NumMFs=3
+MF1='N':'trapmf',[-11 -7 -5 -1]
+MF2='Z':'trapmf',[-5 -1 1 5]
+MF3='P':'trapmf',[1 5 7 11]
+
+[Rules]
